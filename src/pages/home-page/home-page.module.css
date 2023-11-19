@@ -44,3 +44,21 @@
 .cardCreated:hover, .cardNew:hover {
     transform: scale(1.05); /* Transform effect for hover on both types of cards */
 }
+
+.cardText, .cardTextNew {
+    margin-left: 10px;
+    text-align: left;
+    font-family: Calistoga, serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.cardText {
+    color: #FFEBEB;
+}
+
+.cardTextNew {
+    color: #BC4749;
+}

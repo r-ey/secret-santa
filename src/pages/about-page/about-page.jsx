@@ -8,7 +8,7 @@ function AboutPage() {
       <AppHeader />
       <main className={styles.mainSize}>
         <div className={styles.aboutText}>
-          <h3>Inspiration</h3>
+          <h3 className={styles.firstHeader}>Inspiration</h3>
           <p>
             With the holiday season just around the corner, we decided to
             contribute to the seasonal spirit with a
@@ -16,7 +16,8 @@ function AboutPage() {
             This project seemed like an interesting task and a fun end result!
           </p>
           <h3>What it does</h3>
-          <p>Our project attempts to offer a simple solution to organising a Secret
+          <p>
+            Our project attempts to offer a simple solution to organising a Secret
             Santa gift exchange with your friends.
             It is a webapp that allows users to create custom &apos;groups,&apos;
             or Secret Santa gift exchanges, with a list of people in the group,
@@ -25,7 +26,8 @@ function AboutPage() {
             where they have the option to create a group.
           </p>
           <h3>How we made it</h3>
-          <p>We made Secret Santa with React… ADD THE STUFF WE USED. We prototyped
+          <p>
+            We made Secret Santa with React… ADD THE STUFF WE USED. We prototyped
             the design for the different pages in Figma, along with creating .svg&apos;s for the
             backgrounds.
           </p>
