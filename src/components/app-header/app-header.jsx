@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ReactComponent as AppLogo } from '../../images/appLogo.svg';
 import styles from './app-header.module.css';
 
@@ -8,14 +9,14 @@ function AppHeader() {
       {/* Left buttons */}
       <div className={`${styles.flex} ${styles.leftNav}`}>
         <p className={`${styles.navLink}`}>
-          <a className={`${styles.linkNoDecoration} ${styles.homeLink} ${styles.mr30}`} href="/">
+          <Link to="/" replace className={`${styles.linkNoDecoration} ${styles.homeLink} ${styles.mr30}`}>
             Home
-          </a>
+          </Link>
         </p>
         <p className={styles.navLink}>
-          <a className={`${styles.linkNoDecoration} ${styles.homeLink}`} href="/">
+          <Link to="/about" replace className={`${styles.linkNoDecoration} ${styles.homeLink}`}>
             About
-          </a>
+          </Link>
         </p>
       </div>
 
@@ -27,14 +28,15 @@ function AppHeader() {
       {/* Right buttons */}
       <div className={`${styles.flex} ${styles.rightNav}`}>
         <p className={`${styles.navLink}`}>
-          <a className={`${styles.linkNoDecoration} ${styles.homeLink} ${styles.mr30}`} href="/login">
+          <Link to="/profile" replace className={`${styles.linkNoDecoration} ${styles.homeLink} ${styles.mr30}`}>
             My Profile
-          </a>
+          </Link>
         </p>
         <p className={styles.navLink}>
-          <a className={`${styles.linkNoDecoration} ${styles.homeLink}`} href="/sign-up">
+          {/* TODO: Change to hero link */}
+          <Link to="/login" replace className={`${styles.linkNoDecoration} ${styles.homeLink}`}>
             Log out
-          </a>
+          </Link>
         </p>
       </div>
     </header>
