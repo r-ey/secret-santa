@@ -7,9 +7,7 @@ function AboutPage() {
     <div className={styles.app}>
       <AppHeader />
       <main className={styles.mainSize}>
-        <div className={styles.aboutText}>
-          tmp
-        </div>
+        <div className={styles.aboutText}>tmp</div>
       </main>
     </div>
   );
