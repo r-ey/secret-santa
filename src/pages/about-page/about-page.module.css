@@ -26,25 +26,3 @@
     color: #333; /* Set the text color (change as desired) */
     font-size: 20px; /* Set the font size (adjust as needed) */
 }
-
-.cardCreated {
-    border-radius: 50px;
-    width: 350px;
-    height: 200px;
-    background-color: #BC4749;
-    opacity: 0.8;
-    margin-right: 30px;
-}
-
-.cardNew {
-    border-radius: 50px;
-    width: 350px;
-    height: 200px;
-    background-color: #FFEBEB;
-    opacity: 0.8;
-}
-
-.cardContainer {
-    display: flex;
-    margin-top: 60px;
-}

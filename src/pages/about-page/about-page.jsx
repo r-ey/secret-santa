@@ -1,6 +1,6 @@
 import React from 'react';
 import AppHeader from '../../components/app-header/app-header';
-import styles from './home-page.module.css';
+import styles from './about-page.module.css';
 
 function AboutPage() {
   return (
