@@ -1,11 +1,10 @@
 import React from 'react';
-import {
-  Routes, Route,
-} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import AboutPage from '../../pages/about-page/about-page';
 import HomePage from '../../pages/home-page/home-page';
 import ProfilePage from '../../pages/profile-page/profile-page';
+import AboutPage from '../../pages/home-page/about-page';
+import LoginPage from '../../pages/login-page/login-page';
 
 function App() {
   return (
@@ -13,6 +12,8 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/about" element={<AboutPage />} />
       {/* <Route path="/about" element={<AboutPage />} /> */}
+      <Route path="/login" element={<LoginPage />} />
+      {/* <Route path="/profile" element={<ProfilePage />} /> */}
       {/* <Route path="/login" element={<LoginPage />} /> */}
       <Route path="/profile" element={<ProfilePage />} />
       {/* <Route path="/create-account" element={<CreateAccountPage />} /> */}
