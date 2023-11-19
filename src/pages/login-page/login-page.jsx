@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './login-page.module.css';
 
 function LoginPage() {
@@ -25,8 +26,8 @@ function LoginPage() {
               <button type="submit" className={styles.loginButton}>Login</button>
             </form>
             <div className={styles.loginAssist}>
-              <p className={styles.loginAssistText}>Don&apos;t have an account?</p>
-              <p className={styles.loginAssistText}>Forgot password?</p>
+              <Link to="/create-account" replace className={styles.loginAssistText}>Don&apos;t have an account?</Link>
+              <Link to="/forgot-password" replace className={styles.loginAssistText}>Forgot password?</Link>
             </div>
           </div>
         </div>

@@ -109,4 +109,28 @@
     font-weight: 600;
     line-height: 40px; /* 111.111% */
   }
-  
+
+.loginAssist{
+  display: inline-flex;
+  width: 400px;
+  justify-content: center;
+}
+
+.loginAssistText{
+  text-decoration: none;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  color: #BC4749;
+  text-align: center;
+  font-family: Calistoga, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 266.667% */
+  transition: color 0.2s ease;
+}
+
+.loginAssistText:hover {
+  color: #FFEBEB;
+  text-decoration: none;
+}

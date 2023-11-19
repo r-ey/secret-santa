@@ -60,11 +60,11 @@ function AppHeader() {
           {/* TODO: Change to hero link */}
           {
             (window.location.pathname.includes('/login')) ? (
-              <Link to="/login" replace className={`${styles.linkNoDecoration} ${styles.LinkActive} ${styles.mr30}`}>
+              <Link to="/hero" replace className={`${styles.linkNoDecoration} ${styles.LinkActive} ${styles.mr30}`}>
                 Log out
               </Link>
             ) : (
-              <Link to="/login" replace className={`${styles.linkNoDecoration}`}>
+              <Link to="/hero" replace className={`${styles.linkNoDecoration}`}>
                 Log out
               </Link>
             )

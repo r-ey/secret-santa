@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './create-account-page.module.css';
 
 function CreateAccountPage() {
@@ -24,6 +25,9 @@ function CreateAccountPage() {
               />
               <button type="submit" className={styles.loginButton}>Login</button>
             </form>
+            <div className={styles.loginAssist}>
+              <Link to="/login" replace className={styles.loginAssistText}>Already have an account?</Link>
+            </div>
           </div>
         </div>
       </main>
