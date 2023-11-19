@@ -1,3 +1,5 @@
+package secret-santa.backend;
+
 public class Account {
     String username;
     String password;
