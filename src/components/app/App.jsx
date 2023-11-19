@@ -5,6 +5,7 @@ import HomePage from '../../pages/home-page/home-page';
 import ProfilePage from '../../pages/profile-page/profile-page';
 import AboutPage from '../../pages/about-page/about-page';
 import LoginPage from '../../pages/login-page/login-page';
+import CreateAccountPage from '../../pages/create-account-page/create-account-page';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       {/* <Route path="/profile" element={<ProfilePage />} /> */}
       {/* <Route path="/login" element={<LoginPage />} /> */}
       <Route path="/profile" element={<ProfilePage />} />
-      {/* <Route path="/create-account" element={<CreateAccountPage />} /> */}
+      <Route path="/create-account" element={<CreateAccountPage />} />
       {/* <Route path="*" element={<NotFoundPage />} /> */}
     </Routes>
   );

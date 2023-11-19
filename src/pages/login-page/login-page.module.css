@@ -84,6 +84,11 @@ justify-content: center;
   line-height: 40px;
 }
 
+.requirementText::placeholder{
+  color: #FFEBEB;
+  opacity: 50%;
+}
+
 .loginButton{
   border: none;
   width: 223px;
