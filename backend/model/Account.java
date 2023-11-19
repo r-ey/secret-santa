@@ -12,7 +12,18 @@ public class Account {
     }
 
     public void createEvent(String name) {
-        events.add(new Event(name));
+        boolean canAdd = true;
+        
+        for (Event event : events) {
+            if (event.getName() == name) {
+                canAdd = false;
+                break;
+            }
+        }
+
+        if (canAdd) {
+            events.add(new Event(name));
+        }
     }
 
     public ArrayList<Event> getEvents() {
@@ -29,6 +40,15 @@ public class Account {
 
     public String getPassword() {
         return this.password;
+    }
+
+    public void deleteEvent(String name) {
+        for (Event event : events) {
+            if (event.getName().equals(name)) {
+                events.remove(event);
+                return;
+            }
+        }
     }
 
     public String getUsername() {
