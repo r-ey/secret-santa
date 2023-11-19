@@ -6,21 +6,21 @@ public class Tests {
 
         account.createEvent("christmas");
 
-        account.addParticipantToEvent("John", "john@gmail.com", "christmas");
-        account.addParticipantToEvent("George", "george@gmail.com", "christmas");
-        account.addParticipantToEvent("Mary", "mary@gmail.com", "christmas");
+        account.addParticipantToEvent("reynaldidewanto", "reynaldidewanto1106@gmail.com", "christmas");
+        account.addParticipantToEvent("luke", "luke.concini@gmail.com", "christmas");
+        account.addParticipantToEvent("anton", "antonkazachenko2002@gmail.com", "christmas");
 
-        account.addGiftForParticipant("John", "christmas", "John football", 11.99);
-        account.addGiftForParticipant("John", "christmas", "John orange", 10.99);
-        account.addGiftForParticipant("John", "christmas", "John apple", 9.99);
+        account.addGiftForParticipant("reynaldidewanto", "christmas", "reynaldidewanto football", 11.99);
+        account.addGiftForParticipant("reynaldidewanto", "christmas", "reynaldidewanto orange", 10.99);
+        account.addGiftForParticipant("reynaldidewanto", "christmas", "reynaldidewanto apple", 9.99);
 
-        account.addGiftForParticipant("George", "christmas", "George football", 110.99);
-        account.addGiftForParticipant("George", "christmas", "George orange", 100.99);
-        account.addGiftForParticipant("George", "christmas", "George apple", 90.99);
+        account.addGiftForParticipant("luke", "christmas", "luke football", 110.99);
+        account.addGiftForParticipant("luke", "christmas", "luke orange", 100.99);
+        account.addGiftForParticipant("luke", "christmas", "luke apple", 90.99);
 
-        account.addGiftForParticipant("Mary", "christmas", "Mary football", 3.99);
-        account.addGiftForParticipant("Mary", "christmas", "Mary orange", 2.99);
-        account.addGiftForParticipant("Mary", "christmas", "Mary apple", 1.99);
+        account.addGiftForParticipant("anton", "christmas", "anton football", 3.99);
+        account.addGiftForParticipant("anton", "christmas", "anton orange", 2.99);
+        account.addGiftForParticipant("anton", "christmas", "anton apple", 1.99);
 
         account.startEvent("christmas");
 

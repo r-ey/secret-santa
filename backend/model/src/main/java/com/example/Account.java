@@ -33,7 +33,7 @@ public class Account {
     }
 
     public void startEvent(String eventName) {
-        // This will start the event and sent all the emails
+        // This will start the event and send all the emails
 
         Event eventToStart = null;
 

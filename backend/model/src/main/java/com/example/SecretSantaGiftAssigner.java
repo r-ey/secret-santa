@@ -30,7 +30,10 @@ public class SecretSantaGiftAssigner {
     }
 
     public void sendEmails() {
-        
+        for (EmailMessage em : emailMessageFlow) {
+            EmailSender es = new EmailSender();
+            es.sendEmail(em.getEmail(), em.getMessage());
+        }
     }
 
     public ArrayList<EmailMessage> getEmailMessageFlow() {
