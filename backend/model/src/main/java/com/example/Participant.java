@@ -1,4 +1,4 @@
-package secretSanta.backend.model;
+package com.example;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package secretSanta.backend.model;
+package com.example;
 
 public class Gift {
     private double price;

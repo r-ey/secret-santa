@@ -1,4 +1,4 @@
-package secretSanta.backend.model;
+package com.example;
 
 public class EmailMessage {
     private String email;

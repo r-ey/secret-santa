@@ -1,4 +1,4 @@
-package secretSanta.backend.model;
+package com.example;
 import java.util.ArrayList;
 
 public class Account {
@@ -45,7 +45,7 @@ public class Account {
         }
 
         secretSantaGiftAssigner = new SecretSantaGiftAssigner(eventToStart);
-        // secretSantaGiftAssigner.sendEmails();
+        secretSantaGiftAssigner.sendEmails();
     }
 
     public SecretSantaGiftAssigner getSecretSantaGiftAssigner() {

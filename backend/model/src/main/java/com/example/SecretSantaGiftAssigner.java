@@ -1,4 +1,4 @@
-package secretSanta.backend.model;
+package com.example;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -27,6 +27,10 @@ public class SecretSantaGiftAssigner {
                 emailMessageFlow.add(new EmailMessage(participantsClone.get(i).getEmail(), generateMessage(participantsClone.get(0))));
             }
         }
+    }
+
+    public void sendEmails() {
+        
     }
 
     public ArrayList<EmailMessage> getEmailMessageFlow() {
