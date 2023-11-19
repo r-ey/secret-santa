@@ -1,8 +1,8 @@
 package secretSanta.backend.model;
 
 public class Gift {
-    public double price;
-    public String giftName;
+    private double price;
+    private String giftName;
 
     Gift(String giftName, double price) {
         this.giftName = giftName;
@@ -13,7 +13,7 @@ public class Gift {
         return this.giftName;
     }
 
-    public double price() {
+    public double getPrice() {
         return this.price;
     }
 }

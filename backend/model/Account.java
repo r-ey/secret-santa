@@ -2,9 +2,10 @@ package secretSanta.backend.model;
 import java.util.ArrayList;
 
 public class Account {
-    String username;
-    String password;
-    ArrayList<Event> events;
+    private String username;
+    private String password;
+    private ArrayList<Event> events;
+    private SecretSantaGiftAssigner secretSantaGiftAssigner;
 
     Account(String username, String password) {
         this.username = username;
@@ -24,6 +25,10 @@ public class Account {
         if (canAdd) {
             events.add(new Event(name));
         }
+    }
+
+    public void startEvent(Event event) {
+        secretSantaGiftAssigner = new SecretSantaGiftAssigner(event);
     }
 
     public ArrayList<Event> getEvents() {

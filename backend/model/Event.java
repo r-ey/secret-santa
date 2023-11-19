@@ -3,8 +3,8 @@ import java.util.ArrayList;
 
 public class Event {
 
-    ArrayList<Participant> participants;
-    String eventName;
+    private ArrayList<Participant> participants;
+    private String eventName;
     
     Event(String eventName) {
         this.eventName = eventName;

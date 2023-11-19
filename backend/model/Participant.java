@@ -3,9 +3,9 @@ package secretSanta.backend.model;
 import java.util.ArrayList;
 
 public class Participant {
-    public String name;
-    public String email;
-    public ArrayList<Gift> gifts;
+    private String name;
+    private String email;
+    private ArrayList<Gift> gifts;
 
     Participant(String name, String email) {
         this.name = name;
