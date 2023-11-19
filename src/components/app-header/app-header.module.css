@@ -55,8 +55,12 @@
     transition: color 0.2s ease;
 }
 
-.homeLink {
+.LinkInactive {
     color: #FFEBEB;
+}
+
+.LinkActive {
+    color: #BC4749 !important;
 }
 
 .logo {

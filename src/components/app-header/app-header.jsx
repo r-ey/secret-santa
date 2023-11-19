@@ -8,16 +8,32 @@ function AppHeader() {
     <header className={styles.header}>
       {/* Left buttons */}
       <div className={`${styles.flex} ${styles.leftNav}`}>
-        <p className={`${styles.navLink}`}>
-          <Link to="/" replace className={`${styles.linkNoDecoration} ${styles.homeLink} ${styles.mr30}`}>
-            Home
-          </Link>
-        </p>
-        <p className={styles.navLink}>
-          <Link to="/about" replace className={`${styles.linkNoDecoration} ${styles.homeLink}`}>
-            About
-          </Link>
-        </p>
+        <div className={`${styles.navLink}`}>
+          {
+            (window.location.pathname === '/') ? (
+              <Link to="/" replace className={`${styles.linkNoDecoration} ${styles.LinkActive} ${styles.mr30}`}>
+                Home
+              </Link>
+            ) : (
+              <Link to="/" replace className={`${styles.linkNoDecoration} ${styles.mr30}`}>
+                Home
+              </Link>
+            )
+          }
+        </div>
+        <div className={styles.navLink}>
+          {
+            (window.location.pathname.includes('/about')) ? (
+              <Link to="/about" replace className={`${styles.linkNoDecoration} ${styles.LinkActive} ${styles.mr30}`}>
+                About
+              </Link>
+            ) : (
+              <Link to="/about" replace className={`${styles.linkNoDecoration} ${styles.mr30}`}>
+                About
+              </Link>
+            )
+          }
+        </div>
       </div>
 
       {/* Logo */}
@@ -27,17 +43,33 @@ function AppHeader() {
 
       {/* Right buttons */}
       <div className={`${styles.flex} ${styles.rightNav}`}>
-        <p className={`${styles.navLink}`}>
-          <Link to="/profile" replace className={`${styles.linkNoDecoration} ${styles.homeLink} ${styles.mr30}`}>
-            My Profile
-          </Link>
-        </p>
-        <p className={styles.navLink}>
+        <div className={`${styles.navLink}`}>
+          {
+            (window.location.pathname.includes('/profile')) ? (
+              <Link to="/profile" replace className={`${styles.linkNoDecoration} ${styles.LinkActive} ${styles.mr30}`}>
+                My Profile
+              </Link>
+            ) : (
+              <Link to="/profile" replace className={`${styles.linkNoDecoration} ${styles.mr30}`}>
+                My Profile
+              </Link>
+            )
+          }
+        </div>
+        <div className={styles.navLink}>
           {/* TODO: Change to hero link */}
-          <Link to="/login" replace className={`${styles.linkNoDecoration} ${styles.homeLink}`}>
-            Log out
-          </Link>
-        </p>
+          {
+            (window.location.pathname.includes('/login')) ? (
+              <Link to="/login" replace className={`${styles.linkNoDecoration} ${styles.LinkActive} ${styles.mr30}`}>
+                Log out
+              </Link>
+            ) : (
+              <Link to="/login" replace className={`${styles.linkNoDecoration}`}>
+                Log out
+              </Link>
+            )
+          }
+        </div>
       </div>
     </header>
   );
