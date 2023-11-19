@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './forgot-password-page.module.css';
 
 function ForgotPasswordPage() {
@@ -18,6 +19,9 @@ function ForgotPasswordPage() {
               />
               <button type="submit" className={styles.resetCodeButton}>Send Reset Code</button>
             </form>
+            <div className={styles.loginAssist}>
+              <Link to="/login" replace className={styles.loginAssistText}>Already have an account?</Link>
+            </div>
           </div>
         </div>
       </main>
