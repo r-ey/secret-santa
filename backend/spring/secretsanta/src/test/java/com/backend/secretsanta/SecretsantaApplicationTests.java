@@ -1,10 +1,10 @@
-package com.secretsanta.backend;
+package com.backend.secretsanta;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BackendApplicationTests {
+class SecretsantaApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,13 +1,13 @@
-package com.secretsanta.backend;
+package com.backend.secretsanta;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BackendApplication {
+public class SecretsantaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BackendApplication.class, args);
+		SpringApplication.run(SecretsantaApplication.class, args);
 	}
 
 }
