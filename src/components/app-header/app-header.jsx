@@ -5,9 +5,10 @@ import styles from './app-header.module.css';
 function AppHeader() {
   return (
     <header className={styles.header}>
-      <div className={styles.flex}>
+      {/* Left buttons */}
+      <div className={`${styles.flex} ${styles.leftNav}`}>
         <p className={`${styles.navLink}`}>
-          <a className={`${styles.linkNoDecoration} ${styles.homeLink} ${styles.mr60px}`} href="/">
+          <a className={`${styles.linkNoDecoration} ${styles.homeLink} ${styles.mr30}`} href="/">
             Home
           </a>
         </p>
@@ -17,12 +18,16 @@ function AppHeader() {
           </a>
         </p>
       </div>
+
+      {/* Logo */}
       <div className={styles.logo}>
         <AppLogo />
       </div>
-      <div className={styles.flex}>
+
+      {/* Right buttons */}
+      <div className={`${styles.flex} ${styles.rightNav}`}>
         <p className={`${styles.navLink}`}>
-          <a className={`${styles.linkNoDecoration} ${styles.homeLink} ${styles.mr60px}`} href="/login">
+          <a className={`${styles.linkNoDecoration} ${styles.homeLink} ${styles.mr30}`} href="/login">
             My Profile
           </a>
         </p>

@@ -1,17 +1,29 @@
 .flex {
     display: flex;
+    width: 400px;
+}
+
+.mr30 {
+    margin-right: 90px;
+}
+
+.leftNav {
+    padding-left: 90px;
+}
+
+.rightNav {
+    justify-content: flex-end;
+    padding-right: 90px;
 }
 
 .header {
     display: flex;
     max-width: 1440px;
     margin: 0 auto;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between; /* Changed from space-around to space-between */
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 
 .mr60px {
     margin-right: 60px;
