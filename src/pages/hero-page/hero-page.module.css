@@ -1,0 +1,39 @@
+app {
+    background-image:  url('../../images/heroPage.svg'),linear-gradient(
+    90deg,
+    rgba(71, 117, 71, 1) 0%,
+    rgba(145, 183, 84, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 100% ;
+  /* background-position: 20% 140%; */
+}
+
+.mainSize {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.loginButton{
+    border: none;
+    width: 223px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 32px;
+    background: #BC4749;
+  
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+  
+    color: #FFEBEB;
+    text-align: center;
+    font-family: Calistoga, serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px; /* 111.111% */
+  }
