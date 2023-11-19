@@ -3,29 +3,27 @@ import java.util.ArrayList;
 
 public class Event {
 
-    ArrayList<String> participants;
-    String name;
+    ArrayList<Participant> participants;
+    String eventName;
     
-    Event(String name) {
-        this.name = name;
+    Event(String eventName) {
+        this.eventName = eventName;
     }
 
     public void addParticipant(String name) {
-        if (!participants.contains(name)) {
-            participants.add(name);
-        }
+
     }
 
     public void removeParticipant(String name) {
-        participants.remove(name);
+
     }
 
-    public void changeName(String name) {
-        this.name = name;
+    public void changeName(String eventName) {
+        this.eventName = eventName;
     }
 
     public String getName() {
-        return this.name;
+        return this.eventName;
     }
 
 
