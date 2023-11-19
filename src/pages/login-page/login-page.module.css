@@ -53,7 +53,7 @@ justify-content: center;
 
 .loginInfoText{
   display: flex;
-  margin-top: 30px;
+  margin-top: 50px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -62,18 +62,23 @@ justify-content: center;
 }
 
 .requirementText {
+  background-color: transparent; /* Make input background transparent */
+  border: none; /* Remove default border */
+  border-bottom: 2px solid #bc4749; /* Red bottom border */
+  outline: none; /* Remove the default focus outline */
   color: #bc4749;
+  width: 320px;
   margin: 0;
   text-align: center;
   font-family: Arial, serif;
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
-  line-height: 40px; /* 111.111% */
-  border-bottom: 2px solid #bc4749;
+  line-height: 40px;
 }
 
 .loginButton{
+  border: none;
   width: 223px;
   height: 64px;
   flex-shrink: 0;
@@ -100,6 +105,7 @@ justify-content: center;
 }
 
 .loginAssistText{
+  margin-bottom: 30px;
   color: #BC4749;
   text-align: center;
   font-family: Calistoga, serif;

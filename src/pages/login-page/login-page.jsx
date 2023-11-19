@@ -10,11 +10,20 @@ function LoginPage() {
             Login
           </div>
           <div className={styles.mainEntry}>
-            <div className={styles.loginInfoText}>
-              <h5 className={styles.requirementText}>Username</h5>
-              <h5 className={styles.requirementText}>Password</h5>
-              <div className={styles.loginButton}>Login</div>
-            </div>
+            <form className={styles.loginInfoText} noValidate autoComplete="off">
+              <input
+                id="username"
+                className={styles.requirementText}
+                placeholder="Username" // Placeholder for username
+              />
+              <input
+                id="password"
+                type="password" // Set type as password for security
+                className={styles.requirementText}
+                placeholder="Password" // Placeholder for password
+              />
+              <button type="submit" className={styles.loginButton}>Login</button>
+            </form>
             <div className={styles.loginAssist}>
               <p className={styles.loginAssistText}>Don&apos;t have an account?</p>
               <p className={styles.loginAssistText}>Forgot password?</p>
