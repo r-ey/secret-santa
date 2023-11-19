@@ -1,12 +1,13 @@
 package secretSanta.backend.model;
 import java.util.ArrayList;
 
-public class SantaEvent {
+public class Event {
 
     ArrayList<String> participants;
+    String name;
     
-    SantaEvent() {
-
+    Event(String name) {
+        this.name = name;
     }
 
     public void addParticipant(String name) {
@@ -17,6 +18,10 @@ public class SantaEvent {
 
     public void removeParticipant(String name) {
         participants.remove(name);
+    }
+
+    public void changeName(String name) {
+        this.name = name;
     }
 
 

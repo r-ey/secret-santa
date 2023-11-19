@@ -4,11 +4,19 @@ import java.util.ArrayList;
 public class Account {
     String username;
     String password;
-    ArrayList<SantaEvent> events;
+    ArrayList<Event> events;
 
     Account(String username, String password) {
         this.username = username;
         this.password = password;
+    }
+
+    public void createEvent(String name) {
+        events.add(new Event(name));
+    }
+
+    public ArrayList<Event> getEvents() {
+        return this.getEvents();
     }
 
     public void setUsername(String username) {
