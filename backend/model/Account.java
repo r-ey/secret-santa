@@ -2,14 +2,19 @@ package secretSanta.backend.model;
 import java.util.ArrayList;
 
 public class Account {
+    private static int idCounter = 0;
+
     private String username;
     private String password;
+    private int id;
     private ArrayList<Event> events = new ArrayList<>();
     private SecretSantaGiftAssigner secretSantaGiftAssigner;
 
     Account(String username, String password) {
         this.username = username;
         this.password = password;
+        this.id = idCounter;
+        idCounter++;
     }
 
     public void createEvent(String name) {
