@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Account {
     private String username;
     private String password;
-    private ArrayList<Event> events;
+    private ArrayList<Event> events = new ArrayList<>();
     private SecretSantaGiftAssigner secretSantaGiftAssigner;
 
     Account(String username, String password) {
@@ -16,7 +16,7 @@ public class Account {
         boolean canAdd = true;
 
         for (Event event : events) {
-            if (event.getName() == name) {
+            if (event.getName().equals(name)) {
                 canAdd = false;
                 break;
             }
@@ -27,8 +27,24 @@ public class Account {
         }
     }
 
-    public void startEvent(Event event) {
-        secretSantaGiftAssigner = new SecretSantaGiftAssigner(event);
+    public void startEvent(String eventName) {
+        // This will start the event and sent all the emails
+
+        Event eventToStart = null;
+
+        for (Event event : events) {
+            if (event.getName().equals(eventName)) {
+                eventToStart = event;
+                break;
+            }
+        }
+
+        secretSantaGiftAssigner = new SecretSantaGiftAssigner(eventToStart);
+        // secretSantaGiftAssigner.sendEmails();
+    }
+
+    public SecretSantaGiftAssigner getSecretSantaGiftAssigner() {
+        return this.secretSantaGiftAssigner;
     }
 
     public ArrayList<Event> getEvents() {

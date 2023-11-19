@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Participant {
     private String name;
     private String email;
-    private ArrayList<Gift> gifts;
+    private ArrayList<Gift> gifts = new ArrayList<>();;
 
     Participant(String name, String email) {
         this.name = name;

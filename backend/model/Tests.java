@@ -22,7 +22,11 @@ public class Tests {
         account.addGiftForParticipant("Mary", "christmas", "Mary orange", 2.99);
         account.addGiftForParticipant("Mary", "christmas", "Mary apple", 1.99);
 
-        account.
+        account.startEvent("christmas");
+
+        for (EmailMessage em : account.getSecretSantaGiftAssigner().getEmailMessageFlow()) {
+            System.out.println(em.getEmail() + " " + em.getMessage());
+        }
 
 
     }

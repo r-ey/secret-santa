@@ -6,8 +6,8 @@ import java.util.Random;
 
 public class SecretSantaGiftAssigner {
 
-    private ArrayList<Participant> participants;
-    private ArrayList<EmailMessage> emailMessageFlow;
+    private ArrayList<Participant> participants = new ArrayList<>();;
+    private ArrayList<EmailMessage> emailMessageFlow = new ArrayList<>();;
 
     SecretSantaGiftAssigner(Event event) {
         this.participants = event.getParticipants();
@@ -27,6 +27,10 @@ public class SecretSantaGiftAssigner {
                 emailMessageFlow.add(new EmailMessage(participantsClone.get(i).getEmail(), generateMessage(participantsClone.get(0))));
             }
         }
+    }
+
+    public ArrayList<EmailMessage> getEmailMessageFlow() {
+        return this.emailMessageFlow;
     }
 
     private Gift getRandomGift(Participant participant) {

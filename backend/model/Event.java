@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Event {
 
-    private ArrayList<Participant> participants;
+    private ArrayList<Participant> participants = new ArrayList<>();;
     private String eventName;
     
     Event(String eventName) {
