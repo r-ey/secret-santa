@@ -1,2 +1,28 @@
 .app {
+    background: linear-gradient(90deg, rgba(71,117,71,1) 0%, rgba(145,183,84,1) 100%);
+}
+
+.mainSize {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.aboutText {
+    border-radius: 50px;
+    background: linear-gradient(105deg, #F2E8CF 2.85%, rgba(242, 232, 207, 0.00) 100%);
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(7px);
+    width: 1000px;
+    margin-top: 60px;
+    padding: 20px; /* Add some padding */
+    text-align: center; /* Center the text horizontally */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center content horizontally in the flex container */
+    align-items: center; /* Center content vertically in the flex container */
+    height: 300px; /* Set a specific height (adjust as needed) */
+    font-family: 'Arial', sans-serif; /* Set the font (change as desired) */
+    color: #333; /* Set the text color (change as desired) */
+    font-size: 20px; /* Set the font size (adjust as needed) */
 }
