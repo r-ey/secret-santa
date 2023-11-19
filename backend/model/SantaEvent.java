@@ -1,11 +1,11 @@
-package secret-santa.backend;
+package secretSanta.backend.model;
 import java.util.ArrayList;
 
-public class Event {
+public class SantaEvent {
 
     ArrayList<String> participants;
     
-    Event() {
+    SantaEvent() {
 
     }
 
