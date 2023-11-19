@@ -32,7 +32,7 @@ public class SecretSantaGiftAssigner {
     public void sendEmails() {
         for (EmailMessage em : emailMessageFlow) {
             EmailSender es = new EmailSender();
-            es.sendEmail(em.getEmail(), em.getMessage());
+            es.sendEmail(em.getEmail(), em.getMessage(), "You were assigned as someones seceret santa!");
         }
     }
 
@@ -57,6 +57,9 @@ public class SecretSantaGiftAssigner {
 
         message += "You are assigned to " + participant.getName() + "!";
         message += " They would like " + randomGift.getGiftName() + " which costs $" + randomGift.getPrice();
+        message += " Merry Christmas!!\n";
+        message += "Best, Secret Santa";
+
 
         return message;
     }
