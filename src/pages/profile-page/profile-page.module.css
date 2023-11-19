@@ -70,6 +70,11 @@
     height: 60px;
     border-radius: 32px;
     background: #BC4749;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profileButton:hover{
+    transform: scale(1.05)
 }
 
 .buttonText {
