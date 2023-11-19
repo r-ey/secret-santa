@@ -6,7 +6,9 @@ function LoginPage() {
     <div className={styles.app}>
       <main className={styles.mainSize}>
         <div className={styles.mainContent}>
-          <h3 className={styles.loginText}>Login</h3>
+          <div className={styles.loginText}>
+            Login
+          </div>
           <div className={styles.mainEntry}>
             <div className={styles.loginInfoText}>
               <h5 className={styles.requirementText}>Username</h5>
