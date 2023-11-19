@@ -37,8 +37,12 @@ function AppHeader() {
       </div>
 
       {/* Logo */}
-      <div className={styles.logo}>
+      {/* <div className={styles.logo}>
         <AppLogo />
+      </div> */}
+
+      <div className={styles.logo}>
+        <Link to="/" replace><AppLogo /></Link>
       </div>
 
       {/* Right buttons */}
