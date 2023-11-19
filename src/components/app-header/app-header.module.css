@@ -1,0 +1,51 @@
+.flex {
+    display: flex;
+}
+
+.header {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #6A994E;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mr60px {
+    margin-right: 60px;
+}
+
+.navLink {
+    color: #FFEBEB;
+    margin: 0;
+    text-align: center;
+    font-family: Calistoga, serif;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 114.286% */
+}
+
+.navLink a:hover {
+    color: #BC4749;
+    text-decoration: none;
+}
+
+.linkNoDecoration {
+    text-decoration: none;
+}
+
+.navLink a {
+    color: #FFEBEB;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.homeLink {
+    color: #FFEBEB;
+}
+
+.logo {
+    margin: 10px 0;
+}
