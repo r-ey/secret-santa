@@ -14,5 +14,13 @@ public class Participant {
         gifts.add(gift);
     }
 
+    public void removeGift(Gift gift) {
+        gifts.remove(gift);
+    }
+
+    public String getName() {
+        return name;
+    }
+
     
 }

@@ -13,7 +13,7 @@ public class Account {
 
     public void createEvent(String name) {
         boolean canAdd = true;
-        
+
         for (Event event : events) {
             if (event.getName() == name) {
                 canAdd = false;
@@ -49,6 +49,40 @@ public class Account {
                 return;
             }
         }
+    }
+
+    public void addParticipantToEvent(String nameOfParticipant, String nameOfEvent) {
+        Event eventToAddTo = null;
+
+        for (Event event : events) {
+            if (event.getName().equals(nameOfEvent)) {
+                eventToAddTo = event;
+                break;
+            }
+        }
+
+        eventToAddTo.addParticipant(new Participant(nameOfParticipant));
+    }
+
+    public void addGiftForParticipant(String nameOfParticipant, String nameOfEvent, String nameOfGift, double priceOfGift) {
+        Event eventToAccess = null;
+        Participant participantToAddGiftTo = null;
+
+        for (Event event : events) {
+            if (event.getName().equals(nameOfEvent)) {
+                eventToAccess = event;
+                break;
+            }
+        }
+
+        for (Participant participant : eventToAccess.getParticipants()) {
+            if (participant.getName().equals(nameOfParticipant)) {
+                participantToAddGiftTo = participant;
+                break;
+            }
+        }
+
+        participantToAddGiftTo.addGifts(new Gift(nameOfGift, priceOfGift));
     }
 
     public String getUsername() {

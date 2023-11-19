@@ -10,12 +10,16 @@ public class Event {
         this.eventName = eventName;
     }
 
-    public void addParticipant(String name) {
-
+    public void addParticipant(Participant participant) {
+        participants.add(participant);
     }
 
-    public void removeParticipant(String name) {
+    public ArrayList<Participant> getParticipants() {
+        return participants;
+    }
 
+    public void removeParticipant(Participant participant) {
+        participants.remove(participant);
     }
 
     public void changeName(String eventName) {
