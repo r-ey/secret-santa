@@ -7,6 +7,8 @@ import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import jakarta.persistence.GeneratedValue;
 
+import java.util.List;
+
 @Entity
 @Table
 public class Account {
@@ -22,12 +24,31 @@ public class Account {
         generator = "account_sequence"
     )
 
+    private Long id;
     private String username;
     private String password;
+    private List<String> group;
+    private String budget;
+    private String name;
+    private String preferences;
 
-    public Account(String u, String p) {
+    public Account() {
+
+    }
+
+    // public Account(Long id, String u, String p) {
+    //     this.id = id;
+    //     username = u;
+    //     password = p;
+    // }
+
+    public Account(String u, String p, List<String> g, String b, String n, String pr) {
         username = u;
         password = p;
+        group = g;
+        budget = b;
+        name = n;
+        preferences = p;
     }
 
     public String getUsername() {
@@ -38,9 +59,22 @@ public class Account {
         return password;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Override
     public String toString() {
         return "Account{" +
+            "id=" + id +
             "username='" + username + '\'' +
             ", password='" + password + '\'' +
         "}";
