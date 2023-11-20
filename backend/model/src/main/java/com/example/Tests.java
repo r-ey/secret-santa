@@ -2,8 +2,18 @@ package com.example;
 
 public class Tests {
     public static void main(String[] args) {
-        Account account = new Account("Jake", "123");
+        Account account = new Account("Jake", "123", "jakeyeozh@gmail.com");
+        testSendVerificationCode(account);
 
+
+
+    }
+
+    public static void testSendVerificationCode(Account account) {
+        account.sendVerificationCode();
+    }
+
+    public static void testEmailSendMass(Account account) {
         account.createEvent("christmas");
 
         account.addParticipantToEvent("jake", "jakeyeozh@gmail.com", "christmas");
@@ -27,7 +37,5 @@ public class Tests {
         for (EmailMessage em : account.getSecretSantaGiftAssigner().getEmailMessageFlow()) {
             System.out.println(em.getEmail() + " " + em.getMessage());
         }
-
-
     }
 }
