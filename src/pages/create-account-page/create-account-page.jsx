@@ -18,6 +18,12 @@ function CreateAccountPage() {
                 placeholder="Username" // Placeholder for username
               />
               <input
+                id="email"
+                type="email" // Set type as password for security
+                className={styles.requirementText}
+                placeholder="Email" // Placeholder for password
+              />
+              <input
                 id="password"
                 type="password" // Set type as password for security
                 className={styles.requirementText}
