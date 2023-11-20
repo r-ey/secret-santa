@@ -29,7 +29,9 @@ function CreateAccountPage() {
                 className={styles.requirementText}
                 placeholder="Password" // Placeholder for password
               />
-              <button type="submit" className={styles.createAccountButton}>Create Account</button>
+              <Link to="/login" replace>
+                <button type="submit" className={styles.createAccountButton}>Create Account</button>
+              </Link>
             </form>
             <div className={styles.loginAssist}>
               <Link to="/login" replace className={styles.loginAssistText}>Already have an account?</Link>

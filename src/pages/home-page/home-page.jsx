@@ -11,6 +11,8 @@ function HomePage() {
   const dispatch = useDispatch();
   const { isModalOpen, openModal, closeModal } = useModal();
   const [isGroupOpen, setGroupOpen] = useState(false);
+  const [isCreatedGroupOpen, setCreatedGroupOpen] = useState(false);
+  const [groupModalName, setGroupModalName] = useState('');
   const [groupDetails, setGroupDetails] = useState({
     name: '',
     budget: '',
@@ -46,6 +48,23 @@ function HomePage() {
     event.preventDefault();
     // Handle form submission logic
     dispatch(addGroup(groupDetails));
+    setGroupDetails({
+      name: '',
+      budget: '',
+      people: [{ name: '', preferences: '' }],
+    });
+  };
+
+  const openCreatedGroup = (name) => {
+    setGroupModalName(name);
+    setCreatedGroupOpen(true);
+    openModal();
+  };
+
+  const closeCreatedGroup = () => {
+    setGroupModalName('');
+    setCreatedGroupOpen(false);
+    closeModal();
   };
 
   const openNewGroup = () => {
@@ -71,7 +90,7 @@ function HomePage() {
                 /* eslint-disable-next-line react/no-array-index-key */
                 key={index}
                 className={styles.cardCreated}
-                onClick={!isModalOpen ? openModal : closeModal}
+                onClick={!isModalOpen ? () => openCreatedGroup(group) : closeCreatedGroup}
               >
                 <p className={styles.cardText}>
                   {group.name}
@@ -102,32 +121,25 @@ function HomePage() {
             />
           </Modal>
         ) : (
-          isModalOpen && (
+          (isModalOpen && isCreatedGroupOpen) && (
             <Modal onClose={closeModal}>
               <div className={styles.officeMatesModal}>
                 <h3 className={styles.infoHeader}>Secret Santa Information</h3>
                 <div className={styles.basicInfo}>
-                  <div className={styles.basicElement}>Name: Office-Mates</div>
-                  <div className={styles.basicElement}>Budget: $25</div>
+                  <div className={styles.basicElement}>{`Name: ${groupModalName.name}`}</div>
+                  <div className={styles.basicElement}>{`Budget: $${groupModalName.budget}`}</div>
                 </div>
                 <h3 className={styles.infoHeader}>Secret Santa Members + Preferences</h3>
                 <div className={styles.peopleInfo}>
-                  <div className={styles.person}>
-                    <h1 className={styles.basicElement}>Jack F.</h1>
-                    <h1 className={styles.basicElement}>Chocolate, books</h1>
-                  </div>
-                  <div className={styles.person}>
-                    <h1 className={styles.basicElement}>Muhammed L.</h1>
-                    <h1 className={styles.basicElement}>Trains, basketball gear</h1>
-                  </div>
-                  <div className={styles.person}>
-                    <h1 className={styles.basicElement}>Sarah C.</h1>
-                    <h1 className={styles.basicElement}>Soccer</h1>
-                  </div>
-                  <div className={styles.person}>
-                    <h1 className={styles.basicElement}>Raymond H.</h1>
-                    <h1 className={styles.basicElement}>Spy gear, lego</h1>
-                  </div>
+                  {
+                    groupModalName.people.map((person, index) => (
+                      // eslint-disable-next-line react/no-array-index-key
+                      <div key={index} className={styles.person}>
+                        <div className={styles.basicElement}>{person.name}</div>
+                        <div className={styles.basicElement}>{person.preferences}</div>
+                      </div>
+                    ))
+                  }
                 </div>
               </div>
             </Modal>

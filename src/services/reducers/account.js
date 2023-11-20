@@ -26,33 +26,8 @@ const initialState = {
     id: 34,
     username: 'Sara',
     password: 'password789',
+    email: 'sarajenkins@gmail.com',
     groups: [
-      {
-        name: 'office-mates',
-        budget: 50,
-        people: [
-          {
-            name: 'Sara',
-            email: 'sara@example.com',
-            preferences: 'Enjoys reading and gardening',
-          },
-          {
-            name: 'Alex',
-            email: 'alex123@example.com',
-            preferences: 'Fan of sci-fi movies and board games',
-          },
-          {
-            name: 'Rita',
-            email: 'rita_office@example.com',
-            preferences: 'Loves baking and painting',
-          },
-          {
-            name: 'Daniel',
-            email: 'daniel_work@example.com',
-            preferences: 'Enthusiast of hiking and photography',
-          },
-        ],
-      },
       {
         name: 'office-mates',
         budget: 50,
