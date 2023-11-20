@@ -34,7 +34,22 @@ function HomePage() {
       {
         isModalOpen ? (
           <Modal onClose={closeModal}>
-            <div>tmp</div>
+            <div className={styles.mainModal}>
+              <div className={styles.modalTitle}>Create New Group</div>
+              <form className={styles.newGroup}>
+                <div className={styles.starterInfo}>
+                  <input placeholder="Input the name of the group..." type="text" className={styles.groupNameInput} />
+                  <input placeholder="Input the budget..." type="text" className={styles.budgetInput} />
+                </div>
+                <div className={styles.addPerson}>
+                  <h3>Add people to the group!</h3>
+                  <input placeholder="Full Name..." type="text" className={styles.personName} />
+                  <input placeholder="Email..." type="text" className={styles.personEmail} />
+                  <input placeholder="Enter Preferences" type="text" className={styles.personPreferences} />
+                </div>
+                <input type="submit" className={styles.submitPerson} />
+              </form>
+            </div>
           </Modal>
         ) : null
       }

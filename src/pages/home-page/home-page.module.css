@@ -62,3 +62,169 @@
 .cardTextNew {
     color: #BC4749;
 }
+
+.mainModal{
+    display: block;
+    justify-content:center;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+}
+
+.modalTitle{
+    color: #bc4749;
+    text-align: center;
+    font-family: Arial, serif;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 50% */
+}
+
+.newGroup{
+    display:block;
+}
+
+.starterInfo{
+    display: flex;
+    margin: 30px 100px 0px 100px;
+    justify-content: space-between;
+}
+
+.groupNameInput{
+    background-color: transparent; /* Make input background transparent */
+  border: none; /* Remove default border */
+  border-bottom: 2px solid #bc4749; /* Red bottom border */
+  outline: none; /* Remove the default focus outline */
+  color: #bc4749;
+  width: 320px;
+  margin: 0;
+  text-align: center;
+  font-family: Arial, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+
+}
+
+.groupNameInput::placeholder{
+    color: #69191b;
+  opacity: 80%;
+}
+
+.budgetInput{
+    background-color: transparent; /* Make input background transparent */
+    border: none; /* Remove default border */
+    border-bottom: 2px solid #bc4749; /* Red bottom border */
+    outline: none; /* Remove the default focus outline */
+    color: #bc4749;
+    width: 320px;
+    margin: 0;
+    text-align: center;
+    font-family: Arial, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.budgetInput::placeholder{
+    color: #69191b;
+    opacity: 80%;
+}
+
+.addPerson{
+    margin: 40px 100px 10px;
+    display: block;
+}
+
+.personName{
+    background-color: transparent; /* Make input background transparent */
+    border: none; /* Remove default border */
+    border-bottom: 2px solid #bc4749; /* Red bottom border */
+    outline: none; /* Remove the default focus outline */
+    color: #bc4749;
+    width: 320px;
+    margin: 0;
+    text-align: center;
+    font-family: Arial, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.personName::placeholder{
+    color: #69191b;
+    opacity: 80%;
+}
+.personEmail{
+    background-color: transparent; /* Make input background transparent */
+    border: none; /* Remove default border */
+    border-bottom: 2px solid #bc4749; /* Red bottom border */
+    outline: none; /* Remove the default focus outline */
+    color: #bc4749;
+    width: 320px;
+    margin: 0;
+    text-align: center;
+    font-family: Arial, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.personEmail::placeholder{
+    color: #69191b;
+    opacity: 80%;
+}
+.personPreferences{
+    background-color: transparent; /* Make input background transparent */
+    border: none; /* Remove default border */
+    border-bottom: 2px solid #bc4749; /* Red bottom border */
+    outline: none; /* Remove the default focus outline */
+    color: #bc4749;
+    width: 400px;
+    margin: 0;
+    text-align: center;
+    font-family: Arial, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.personPreferences::placeholder{
+    color: #69191b;
+    opacity: 80%;
+}
+
+.submitPerson{
+    border: none;
+  width: 223px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 32px;
+  background: #BC4749;
+
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #FFEBEB;
+  text-align: center;
+  font-family: Calistoga, serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px; /* 111.111% */
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.submitPerson:hover{
+    transform: scale(1.05);
+  }
+
+
