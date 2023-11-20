@@ -15,11 +15,11 @@ function ProfilePage() {
           <div className={styles.aboutTab}>
             <div>
               <h3 className={styles.aboutHeader}>Preferences</h3>
-              <p>tmp</p>
+              <p>Enjoys reading and gardening</p>
             </div>
             <div>
               <h3 className={styles.aboutHeader}>Allergies</h3>
-              <p>tmp</p>
+              <p>N/A</p>
             </div>
           </div>
         </div>
