@@ -25,23 +25,11 @@ function ProfilePage() {
         </div>
         <div className={styles.contentSection}>
           <h1 className={styles.headerOne}>Info</h1>
-          <div className={styles.profileCards}>
-            <div className={styles.card}>
-              <h3 className={styles.cardHeader}>Groups Joined</h3>
-            </div>
-            <div className={styles.card}>
-              <h3 className={styles.cardHeader}>Gifts Given</h3>
-            </div>
-            <div className={styles.card}>
-              <h3 className={styles.cardHeader}>Gifts Received</h3>
-            </div>
+          <div className={styles.textBox}>
+            <input className={styles.input} type="text" placeholder="Enter Name" />
+            <input className={styles.input} type="text" placeholder="Enter Password" />
+            <input className={styles.input} type="text" placeholder="Enter Preferences" />
           </div>
-          {/* eslint-disable-next-line react/button-has-type */}
-          <button className={styles.profileButton}>
-            <p className={styles.buttonText}>
-              Join Group
-            </p>
-          </button>
         </div>
       </main>
     </div>
