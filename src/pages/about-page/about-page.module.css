@@ -1,0 +1,48 @@
+.app {
+    background-image:  url('../../images/christmasLights.svg'),linear-gradient(
+    90deg,
+    rgba(71, 117, 71, 1) 0%,
+    rgba(145, 183, 84, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 120% ;
+  background-position: 20% 140%;
+}
+
+.mainSize {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.aboutText {
+    border-radius: 50px;
+    background: linear-gradient(105deg, #F2E8CF 2.85%, rgba(242, 232, 207, 0.00) 100%);
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(7px);
+    width: 1000px; /* Adjust width as needed */
+    margin-top: 60px;
+    padding: 40px; /* Add padding to prevent text from touching the edges */
+    text-align: left; /* Align text to the left */
+    font-family: 'Arial', sans-serif; /* Set the font */
+    color: #333; /* Set text color */
+    overflow: unset; /* Add scrollbar if content overflows */
+    margin-bottom: 20px;
+}
+
+.aboutText h3 {
+    font-size: 36px; /* Size of headers */
+    color: #6A994E; /* Header color */
+    margin-bottom: 20px; /* Space below headers */
+}
+
+.aboutText p {
+    font-size: 20px; /* Size of paragraph text */
+    line-height: 1.6; /* Spacing between lines */
+    margin-bottom: 20px; /* Space below paragraphs */
+}
+
+.firstHeader {
+    margin-top: 0;
+}

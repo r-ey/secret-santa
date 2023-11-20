@@ -1,0 +1,22 @@
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 80%;
+    overflow:scroll;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #1C1C21;
+    z-index: 1000;
+    border-radius: 50px;
+    background: linear-gradient(105deg, rgb(243, 220, 240), rgb(199, 194, 198));
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(7px);
+}
+
+.crossDiv {
+    display: flex;
+    margin-top: 15px;
+    justify-content: flex-end;
+}

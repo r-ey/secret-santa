@@ -1,0 +1,136 @@
+.app {
+  background-image:  url('../../images/loginPageImage.svg'),linear-gradient(
+    90deg,
+    rgba(71, 117, 71, 1) 0%,
+    rgba(145, 183, 84, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-position: -35% 10%;
+}
+
+.mainSize {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.mainContent {
+  display: block;
+}
+
+.loginText {
+  color: #bc4749;
+  margin: 160px 0 70px;
+  text-align: center;
+  font-family: Arial, serif;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 50% */
+}
+
+.mainEntry {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+justify-content: center;
+
+
+  border-radius: 50px;
+  background: linear-gradient(
+    105deg,
+    #f2e8cf 2.85%,
+    rgba(242, 232, 207, 0) 100%
+  );
+
+  width: 745px;
+  height: 389px;
+
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(7px);
+
+  
+}
+
+.loginInfoText{
+  display: flex;
+  margin-top: 50px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 72px;
+  width: 364px;
+}
+
+.requirementText {
+  background-color: transparent; /* Make input background transparent */
+  border: none; /* Remove default border */
+  border-bottom: 2px solid #bc4749; /* Red bottom border */
+  outline: none; /* Remove the default focus outline */
+  color: #bc4749;
+  width: 320px;
+  margin: 0;
+  text-align: center;
+  font-family: Arial, serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.requirementText::placeholder{
+  color: #FFEBEB;
+  opacity: 50%;
+}
+
+.loginButton{
+  border: none;
+  width: 223px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 32px;
+  background: #BC4749;
+
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #FFEBEB;
+  text-align: center;
+  font-family: Calistoga, serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px; /* 111.111% */
+  transition: transform 0.3s ease-in-out;
+}
+
+.loginButton:hover{
+  transform: scale(1.05);
+}
+
+.loginAssist{
+  display: inline-flex;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.loginAssistText{
+  text-decoration: none;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  color: #BC4749;
+  text-align: center;
+  font-family: Calistoga, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 266.667% */
+  transition: color 0.2s ease;
+}
+
+.loginAssistText:hover {
+    color: #FFEBEB;
+    text-decoration: none;
+}
