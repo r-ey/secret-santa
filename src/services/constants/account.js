@@ -1,6 +1,5 @@
-export const LOGIN__REQUEST = 'LOGIN__REQUEST';
-export const LOGIN__SUCCESS = 'LOGIN__SUCCESS';
-export const LOGIN__FAILURE = 'LOGIN__FAILURE';
+export const LOGIN_SUCCESS = 'LOGIN__SUCCESS';
+export const LOGIN_FAILURE = 'LOGIN__FAILURE';
 
 export const SET_COOKIE = 'SET_COOKIE';
 export const REMOVE_COOKIE = 'REMOVE_COOKIE';

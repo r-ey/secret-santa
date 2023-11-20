@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import AppHeader from '../../components/app-header/app-header';
 import styles from './home-page.module.css';
 import Modal from '../../components/modal/modal';
 import useModal from '../../hooks/useModal';
-import data from '../../utils/data.js';
 
 function HomePage() {
   const { isModalOpen, openModal, closeModal } = useModal();
+  const [isGroupOpen, setGroupOpen] = useState(false);
   const [groupDetails, setGroupDetails] = useState({
     name: '',
     budget: '',
     people: [{ name: '', preferences: '' }],
   });
+
+  const { accountData } = useSelector((state) => state.accountStore);
 
   const deletePerson = (index) => {
     const newPeople = groupDetails.people.filter((_, idx) => idx !== index);
@@ -41,16 +44,31 @@ function HomePage() {
     // Handle form submission logic
   };
 
-  const sara = data[0];
+  const openNewGroup = () => {
+    setGroupOpen(true);
+    openModal();
+  };
+
+  const closeNewGroup = () => {
+    setGroupOpen(false);
+    closeModal();
+  };
+
   return (
     <div className={styles.app}>
       <AppHeader />
       <main className={styles.mainSize}>
         <div className={styles.cardContainer}>
           {
-            sara.groups.map((group, index) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <div key={index} className={styles.cardCreated}>
+            accountData.groups.map((group, index) => (
+              // eslint-disable-next-line max-len
+              // eslint-disable-next-line react/no-array-index-key,jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions
+              <div
+                /* eslint-disable-next-line react/no-array-index-key */
+                key={index}
+                className={styles.cardCreated}
+                onClick={!isModalOpen ? openModal : closeModal}
+              >
                 <p className={styles.cardText}>
                   {group.name}
                 </p>
@@ -59,7 +77,7 @@ function HomePage() {
           }
           {/* eslint-disable-next-line max-len */}
           {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
-          <div className={styles.cardNew} onClick={isModalOpen ? closeModal : openModal}>
+          <div className={styles.cardNew} onClick={!isGroupOpen ? openNewGroup : closeNewGroup}>
             <p className={styles.cardTextNew}>
               + Create New Group
             </p>
@@ -67,8 +85,9 @@ function HomePage() {
         </div>
       </main>
       {
-        isModalOpen && (
-          <Modal onClose={closeModal}>
+        // eslint-disable-next-line no-nested-ternary
+        (isModalOpen && isGroupOpen) ? (
+          <Modal onClose={closeNewGroup}>
             <h3 className={styles.modalHeader}>Create a New Group</h3>
             <div className={styles.modalTextBox}>
               <div>
@@ -118,6 +137,12 @@ function HomePage() {
               </div>
             </div>
           </Modal>
+        ) : (
+          isModalOpen && (
+            <Modal onClose={closeModal}>
+              <div>tmp</div>
+            </Modal>
+          )
         )
       }
     </div>

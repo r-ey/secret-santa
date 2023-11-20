@@ -1,7 +1,6 @@
 import {
-  // LOGIN__REQUEST,
-  // LOGIN__SUCCESS,
-  // LOGIN__FAILURE,
+  LOGIN_SUCCESS,
+  LOGIN_FAILURE,
   SET_COOKIE,
   REMOVE_COOKIE,
   // LOGOUT__REQUEST,
@@ -20,6 +19,18 @@ import {
   // DELETE_PROFILE__SUCCESS,
   // DELETE_PROFILE__FAILURE,
 } from '../constants/account';
+
+export function loginSuccess() {
+  return {
+    type: LOGIN_SUCCESS,
+  };
+}
+
+export function loginFailure() {
+  return {
+    type: LOGIN_FAILURE,
+  };
+}
 
 export function setCookie() {
   return {

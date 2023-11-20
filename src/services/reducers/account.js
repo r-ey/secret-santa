@@ -1,7 +1,6 @@
 import {
-  // LOGIN__REQUEST,
-  // LOGIN__SUCCESS,
-  // LOGIN__FAILURE,
+  LOGIN_SUCCESS,
+  LOGIN_FAILURE,
   SET_COOKIE,
   REMOVE_COOKIE,
   // LOGOUT__REQUEST,
@@ -22,13 +21,140 @@ import {
 } from '../constants/account';
 
 const initialState = {
-  accountData: {},
-  cookie: false,
+  accountData: {
+    id: 34,
+    username: 'Sara',
+    password: 'password789',
+    groups: [
+      {
+        name: 'office-mates',
+        budget: 50,
+        people: [
+          {
+            name: 'Sara',
+            email: 'sara@example.com',
+            preferences: 'Enjoys reading and gardening',
+          },
+          {
+            name: 'Alex',
+            email: 'alex123@example.com',
+            preferences: 'Fan of sci-fi movies and board games',
+          },
+          {
+            name: 'Rita',
+            email: 'rita_office@example.com',
+            preferences: 'Loves baking and painting',
+          },
+          {
+            name: 'Daniel',
+            email: 'daniel_work@example.com',
+            preferences: 'Enthusiast of hiking and photography',
+          },
+        ],
+      },
+      {
+        name: 'office-mates',
+        budget: 50,
+        people: [
+          {
+            name: 'Sara',
+            email: 'sara@example.com',
+            preferences: 'Enjoys reading and gardening',
+          },
+          {
+            name: 'Alex',
+            email: 'alex123@example.com',
+            preferences: 'Fan of sci-fi movies and board games',
+          },
+          {
+            name: 'Rita',
+            email: 'rita_office@example.com',
+            preferences: 'Loves baking and painting',
+          },
+          {
+            name: 'Daniel',
+            email: 'daniel_work@example.com',
+            preferences: 'Enthusiast of hiking and photography',
+          },
+        ],
+      },
+      {
+        name: 'family',
+        budget: 75,
+        people: [
+          {
+            name: 'Sara',
+            email: 'sara@example.com',
+            preferences: 'Loves cooking and travel',
+          },
+          {
+            name: 'Mike',
+            email: 'mike_family@example.com',
+            preferences: 'Interested in sports and technology',
+          },
+          {
+            name: 'Jenny',
+            email: 'jenny@example.com',
+            preferences: 'Avid hiker and photographer',
+          },
+          {
+            name: 'Lucy',
+            email: 'lucy_family@example.com',
+            preferences: 'Enjoys gardening and DIY projects',
+          },
+        ],
+      },
+      {
+        name: 'bookclub',
+        budget: 30,
+        people: [
+          {
+            name: 'Sara',
+            email: 'sara@example.com',
+            preferences: 'Fond of historical fiction and biographies',
+          },
+          {
+            name: 'Linda',
+            email: 'linda_b@example.com',
+            preferences: 'Loves mystery novels and knitting',
+          },
+          {
+            name: 'John',
+            email: 'john_book@example.com',
+            preferences: 'Keen on classic literature and poetry',
+          },
+          {
+            name: 'Emma',
+            email: 'emma_bookclub@example.com',
+            preferences: 'Enthusiast of modern novels and yoga',
+          },
+          {
+            name: 'George',
+            email: 'george_b@example.com',
+            preferences: 'Interested in thrillers and chess',
+          },
+        ],
+      },
+    ],
+  },
+  loginStatus: 'initial',
 };
 
 // eslint-disable-next-line default-param-last
 export default function accountReducer(state = initialState, action) {
   switch (action.type) {
+    case LOGIN_SUCCESS: {
+      return {
+        ...state,
+        loginStatus: true,
+      };
+    }
+    case LOGIN_FAILURE: {
+      return {
+        ...state,
+        loginStatus: false,
+      };
+    }
     case SET_COOKIE:
       return {
         ...state,
