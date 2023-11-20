@@ -104,7 +104,32 @@ function HomePage() {
         ) : (
           isModalOpen && (
             <Modal onClose={closeModal}>
-              <div>tmp</div>
+              <div className={styles.officeMatesModal}>
+                <h3 className={styles.infoHeader}>Secret Santa Information</h3>
+                <div className={styles.basicInfo}>
+                  <div className={styles.basicElement}>Name: Office-Mates</div>
+                  <div className={styles.basicElement}>Budget: $25</div>
+                </div>
+                <h3 className={styles.infoHeader}>Secret Santa Members + Preferences</h3>
+                <div className={styles.peopleInfo}>
+                  <div className={styles.person}>
+                    <h1 className={styles.basicElement}>Jack F.</h1>
+                    <h1 className={styles.basicElement}>Chocolate, books</h1>
+                  </div>
+                  <div className={styles.person}>
+                    <h1 className={styles.basicElement}>Muhammed L.</h1>
+                    <h1 className={styles.basicElement}>Trains, basketball gear</h1>
+                  </div>
+                  <div className={styles.person}>
+                    <h1 className={styles.basicElement}>Sarah C.</h1>
+                    <h1 className={styles.basicElement}>Soccer</h1>
+                  </div>
+                  <div className={styles.person}>
+                    <h1 className={styles.basicElement}>Raymond H.</h1>
+                    <h1 className={styles.basicElement}>Spy gear, lego</h1>
+                  </div>
+                </div>
+              </div>
             </Modal>
           )
         )
