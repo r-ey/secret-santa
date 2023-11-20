@@ -127,7 +127,7 @@ function HomePage() {
                 <h3 className={styles.infoHeader}>Secret Santa Information</h3>
                 <div className={styles.basicInfo}>
                   <div className={styles.basicElement}>{`Name: ${groupModalName.name}`}</div>
-                  <div className={styles.basicElement}>{`Budget: $${groupModalName.budget}`}</div>
+                  <div className={styles.basicElement}>{`Budget Per Person: $${groupModalName.budget}`}</div>
                 </div>
                 <h3 className={styles.infoHeader}>Secret Santa Members + Preferences</h3>
                 <div className={styles.peopleInfo}>
