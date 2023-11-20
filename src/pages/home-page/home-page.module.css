@@ -257,3 +257,60 @@
 .submitButton:hover{
     transform: scale(1.05)
 }
+
+
+
+
+.officeMatesModal{
+    /* width: 100%; */
+    display: block;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.infoHeader{
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+    justify-content: space-around;
+    background-color: transparent; /* Make input background transparent */
+    border: none; /* Remove default border */
+    border-bottom: 2px solid #bc4749; /* Red bottom border */
+    outline: none; /* Remove the default focus outline */
+    color: #bc4749;
+    width: 700px;
+    text-align: center;
+    font-family: Arial, serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.basicInfo{
+    display: flex;
+    justify-content: space-evenly;
+    
+
+
+}
+
+.basicElement{
+    margin-left: 10px;
+    text-align: left;
+    font-family: Calistoga, serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    color: black;
+    margin: 0px;
+}
+
+
+.person{
+    display: flex;
+    width: 60%;
+    margin-left: 200px;
+    justify-content: space-between;
+}
