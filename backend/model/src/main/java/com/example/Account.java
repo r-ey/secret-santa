@@ -67,7 +67,7 @@ public class Account {
 
         EmailSender es = new EmailSender();
 
-        es.sendEmail(this.email, "Here is your verification code! " + randomCode, "Request to reset email!");
+        es.sendEmail(this.email, "Here is your verification code! " + randomCode, "Request to reset password!");
     }
 
     public void setUsername(String username) {
