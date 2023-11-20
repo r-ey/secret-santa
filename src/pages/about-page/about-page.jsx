@@ -27,12 +27,16 @@ function AboutPage() {
           </p>
           <h3>How we made it</h3>
           <p>
-            We made Secret Santa with React… ADD THE STUFF WE USED. We prototyped
+            Overall we made the project with React.js, react router, redux, and figma for design.
+            We prototyped
             the design for the different pages in Figma, along with creating .svg&apos;s for the
             backgrounds.
           </p>
           <h3>Challenges</h3>
-          <p>It was our first time using Figma so designing the pages took longer than desired.</p>
+          <p>
+            It was our first time using Figma so designing the pages took longer than desired.
+            Making the Java API was a massive struggle and we ended up scrapping it.
+          </p>
 
         </div>
       </main>
