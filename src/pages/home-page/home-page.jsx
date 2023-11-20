@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import AppHeader from '../../components/app-header/app-header';
 import styles from './home-page.module.css';
 import Modal from '../../components/modal/modal';
 import useModal from '../../hooks/useModal';
+import CreateNewGroup from '../../components/create-new-group/create-new-group';
+import { addGroup } from '../../services/actions/account';
 
 function HomePage() {
+  const dispatch = useDispatch();
   const { isModalOpen, openModal, closeModal } = useModal();
   const [isGroupOpen, setGroupOpen] = useState(false);
   const [groupDetails, setGroupDetails] = useState({
@@ -42,6 +45,7 @@ function HomePage() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Handle form submission logic
+    dispatch(addGroup(groupDetails));
   };
 
   const openNewGroup = () => {
@@ -88,56 +92,14 @@ function HomePage() {
         // eslint-disable-next-line no-nested-ternary
         (isModalOpen && isGroupOpen) ? (
           <Modal onClose={closeNewGroup}>
-            <h3 className={styles.modalHeader}>Create a New Group</h3>
-            <div className={styles.modalTextBox}>
-              <div>
-                <form onSubmit={handleSubmit}>
-                  <div>
-                    <div className={styles.groupInformation}>
-                      <input
-                        type="text"
-                        placeholder="Group Name"
-                        className={styles.requirementText}
-                        value={groupDetails.name}
-                        onChange={(e) => setGroupDetails({ ...groupDetails, name: e.target.value })}
-                      />
-                      <input
-                        type="number"
-                        placeholder="Budget Per Person"
-                        className={styles.requirementText}
-                        value={groupDetails.budget}
-                        /* eslint-disable-next-line max-len */
-                        onChange={(e) => setGroupDetails({ ...groupDetails, budget: e.target.value })}
-                      />
-                    </div>
-                    {groupDetails.people.map((person, index) => (
-                      // eslint-disable-next-line react/no-array-index-key
-                      <div key={index} className={styles.personInformation}>
-                        <input
-                          type="text"
-                          name="name"
-                          placeholder="Name"
-                          className={styles.personName}
-                          value={person.name}
-                          onChange={(e) => handleInputChange(index, e)}
-                        />
-                        <input
-                          type="text"
-                          name="preferences"
-                          placeholder="Preferences"
-                          className={styles.personPreferences}
-                          value={person.preferences}
-                          onChange={(e) => handleInputChange(index, e)}
-                        />
-                        <button className={styles.deleteButton} type="button" onClick={() => deletePerson(index)}>Delete</button>
-                      </div>
-                    ))}
-                    <button className={styles.addPersonButton} type="button" onClick={addPerson}>+ Add Person</button>
-                    <button className={styles.submitButton} type="submit">Submit</button>
-                  </div>
-                </form>
-              </div>
-            </div>
+            <CreateNewGroup
+              setGroupDetails={setGroupDetails}
+              groupDetails={groupDetails}
+              handleSubmit={handleSubmit}
+              handleInputChange={handleInputChange}
+              addPerson={addPerson}
+              deletePerson={deletePerson}
+            />
           </Modal>
         ) : (
           isModalOpen && (

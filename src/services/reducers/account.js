@@ -3,6 +3,7 @@ import {
   LOGIN_FAILURE,
   SET_COOKIE,
   REMOVE_COOKIE,
+  ADD_GROUP,
   // LOGOUT__REQUEST,
   // LOGOUT__SUCCESS,
   // LOGOUT__FAILURE,
@@ -143,6 +144,19 @@ const initialState = {
 // eslint-disable-next-line default-param-last
 export default function accountReducer(state = initialState, action) {
   switch (action.type) {
+    case ADD_GROUP: {
+      const { groups } = state.accountData;
+      return {
+        ...state,
+        accountData: {
+          ...state.accountData,
+          groups: [
+            ...groups,
+            action.payload,
+          ],
+        },
+      };
+    }
     case LOGIN_SUCCESS: {
       return {
         ...state,
