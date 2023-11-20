@@ -93,7 +93,7 @@ function HomePage() {
               <div>
                 <form onSubmit={handleSubmit}>
                   <div>
-                    <div>
+                    <div className={styles.groupInformation}>
                       <input
                         type="text"
                         placeholder="Group Name"
@@ -112,11 +112,12 @@ function HomePage() {
                     </div>
                     {groupDetails.people.map((person, index) => (
                       // eslint-disable-next-line react/no-array-index-key
-                      <div key={index}>
+                      <div key={index} className={styles.personInformation}>
                         <input
                           type="text"
                           name="name"
                           placeholder="Name"
+                          className={styles.personName}
                           value={person.name}
                           onChange={(e) => handleInputChange(index, e)}
                         />
@@ -124,14 +125,15 @@ function HomePage() {
                           type="text"
                           name="preferences"
                           placeholder="Preferences"
+                          className={styles.personPreferences}
                           value={person.preferences}
                           onChange={(e) => handleInputChange(index, e)}
                         />
-                        <button type="button" onClick={() => deletePerson(index)}>Delete</button>
+                        <button className={styles.deleteButton} type="button" onClick={() => deletePerson(index)}>Delete</button>
                       </div>
                     ))}
-                    <button type="button" onClick={addPerson}>+ Add Person</button>
-                    <button type="submit">Submit</button>
+                    <button className={styles.addPersonButton} type="button" onClick={addPerson}>+ Add Person</button>
+                    <button className={styles.submitButton} type="submit">Submit</button>
                   </div>
                 </form>
               </div>
